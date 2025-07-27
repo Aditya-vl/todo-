@@ -1,0 +1,218 @@
+/* ========== LAYOUT ========== */
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 3%;
+  /* background-image: linear-gradient(100deg, #356a70, #113946); */
+  color: rgb(225, 32, 32);
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+
+.header,
+.form {
+  width: 100%;
+  min-height: 10vh;
+  margin: 0 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+  min-height: 25vh;
+}
+
+section h1 {
+  color: #201b1b;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.date-time {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;
+  padding: 0.8rem;
+  font-size: 1.7rem;
+}
+
+form input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  background-color: #798da2;
+  color: var(--primary-color);
+  transition: background-color 200ms ease-in-out;
+}
+
+form input::placeholder {
+  color: #f8f4f4;
+  opacity: 0.7;
+}
+
+form input:hover {
+  cursor: text;
+}
+
+form button {
+  min-width: 100px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #7b93a3;
+  color: var(--secondary-color);
+  transition: box-shadow 200ms ease, background-color 200ms ease-in-out;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #c7b159;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 20%;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: 0.5fr 0.2fr 0.2fr;
+  justify-content: start;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem 1rem;
+  margin: 2px 0;
+  font-size: 1.3rem;
+  color: #1c2833;
+  background-color: #f2f3f4;
+  border-radius: 20px;
+  overflow-wrap: anywhere;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+
+li span {
+  max-width: 20rem;
+  color: #1c2833;
+}
+
+.check-btn,
+.delete-btn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  /* color: #000; */
+  cursor: pointer;
+  margin: 0 2px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.check-btn {
+  background-color: #4db076;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+
+.myUnOrdList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 120px;
+  font-size: 0.75rem;
+}
+
+.myUnOrdList li {
+  padding: 2px 4px;
+  margin: 2px;
+  font-size: 0.75rem;
+}
+
+
+.checked span {
+  text-decoration: line-through;
+  color: green;
+}
+
+
+span {
+  margin-right: 3.2rem;
+}
+
+.clear-btn {
+  background-color: #e74c3c;
+  font-size: 1.6rem;
+  padding: 1rem 2.2rem;
+  border-radius: 0.3rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.clear-btn:hover {
+  background-color: #8d1407;
+}
+
+
+
+.app-container {
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 2rem;
+}
+
+.app-container.light {
+  background-color: #c2b5b5;
+  color: #21da0c;
+}
+
+/* Dark Theme */
+.app-container.dark {
+  background-color: #272424;
+  /* color: #ded7d7; */
+}
+
+.app-container.dark header h1 {
+  color: white;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #2c8e83;
+}
+
